@@ -1,3 +1,10 @@
+# Customized JSON Resume Theme: Elegant
+
+🖼️ This is a slightly tweaked version of the [Elegant theme](https://github.com/mudassir0909/jsonresume-theme-elegant). Tweaked to fit my design preferences and published on NPM.
+
+<details>
+  <summary>Click to expand README.md of the source repository!</summary>
+
 # Elegant Theme [![npm version](https://badge.fury.io/js/jsonresume-theme-elegant.svg)](http://badge.fury.io/js/jsonresume-theme-elegant)
 
 Responsive theme for [JsonResume](https://jsonresume.org/) inspired by card layouts.
@@ -83,3 +90,5 @@ Visit this [wiki page](https://github.com/mudassir0909/jsonresume-theme-elegant/
 ### Roadmap
 
 [https://github.com/mudassir0909/jsonresume-theme-elegant/labels/enhancement](https://github.com/mudassir0909/jsonresume-theme-elegant/labels/enhancement)
+
+</details>

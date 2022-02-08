@@ -1,0 +1,21 @@
+name: Publish Package to NPM
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish-npm-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: grunt build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_NPM_TOKEN}}
