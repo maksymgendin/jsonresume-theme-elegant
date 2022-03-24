@@ -1,21 +1,29 @@
-name: Publish Package to NPM
+name: Increment version and publish package to NPM registry
 on:
   push:
     branches:
       - master
 jobs:
-  publish-npm-registry:
+  increment-and-publish-to-npm-registry:
     runs-on: ubuntu-latest
+    if: "startsWith(github.event.head_commit.message, 'fix') || startsWith(github.event.head_commit.message, 'feat')"
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 16
           registry-url: https://registry.npmjs.org
       - run: npm ci
       - run: grunt build
+      - run: npm version patch
+        if: "startsWith(github.event.head_commit.message, 'fix:')"
+      - run: npm version minor
+        if: "startsWith(github.event.head_commit.message, 'feat:')"
+      - run: npm version major
+        if: "startsWith(github.event.head_commit.message, 'feat!:') || startsWith(github.event.head_commit.message, 'fix!:')"
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_NPM_TOKEN}}
+      - run: git push
