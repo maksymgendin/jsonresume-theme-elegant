@@ -17,6 +17,8 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm ci
       - run: grunt build
+      - run: git config --global user.name "Maksym Gendin"
+      - run: git config --global user.email "maksym.gendin@gmail.com"
       - run: npm version patch
         if: "startsWith(github.event.head_commit.message, 'fix:')"
       - run: npm version minor
