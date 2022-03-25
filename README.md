@@ -1,6 +1,6 @@
 # Customized JSON Resume Theme: Elegant
 
-🖼️ This is a slightly tweaked version of the [Elegant theme](https://github.com/mudassir0909/jsonresume-theme-elegant). Tweaked to fit my design preferences and published on NPM.
+🖼️ This is a slightly tweaked version of the [Elegant theme](https://github.com/mudassir0909/jsonresume-theme-elegant). Tweaked to fit my design preferences and published on my own NPM account.
 
 <details>
   <summary>Click to expand README.md of the source repository!</summary>
