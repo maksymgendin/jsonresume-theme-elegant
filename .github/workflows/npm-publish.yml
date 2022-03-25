@@ -15,7 +15,11 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
-      - run: npm ci
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn install --frozen-lockfile
       - run: grunt build
       - run: git config --global user.name "Maksym Gendin"
       - run: git config --global user.email "maksym.gendin@gmail.com"
