@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     if: "startsWith(github.event.head_commit.message, 'fix') || startsWith(github.event.head_commit.message, 'feat')"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: latest
           registry-url: https://registry.npmjs.org
       - run: yarn install --frozen-lockfile
       - run: grunt build
