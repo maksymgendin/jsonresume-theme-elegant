@@ -1425,11 +1425,11 @@ resolve@^1.15.1, resolve@^1.19.0, resolve@^1.9.0:
     supports-preserve-symlinks-flag "^1.0.0"
 
 resume-schema@1.x:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/resume-schema/-/resume-schema-1.0.0.tgz#f26cb8032f7533e9ef8145bf656b672cbf5e7845"
-  integrity sha512-9ZEP3oO1IRrjQWTOfDq7fDNNeJp7gWqfS/l2D02f6f25nRw/wRAkpDyvIlw9uoaDARK7Ebj/CN2D/6Ht27S0zg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/resume-schema/-/resume-schema-1.0.1.tgz#91d2be622ebc36bbd53c564b3b391467aa21bbee"
+  integrity sha512-Uy52oZI/4n5s97eqdo39sjV5sN+617CvLKCv8xc9qeKq21VkbnH/FTpit7/LfFxI1btGRrldxm9mQjvvn+Gd1A==
   dependencies:
-    z-schema "^4.2.2"
+    z-schema "^4.2.4"
 
 rimraf@^2.6.2:
   version "2.7.1"
@@ -1751,7 +1751,7 @@ yargs@^15.4.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-z-schema@^4.2.2:
+z-schema@^4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/z-schema/-/z-schema-4.2.4.tgz#73102a49512179b12a8ec50b1daa676b984da6e4"
   integrity sha512-YvBeW5RGNeNzKOUJs3rTL4+9rpcvHXt5I051FJbOcitV8bl40pEfcG0Q+dWSwS0/BIYrMZ/9HHoqLllMkFhD0w==
